@@ -1,4 +1,3 @@
-
 /**
  * To generate random passwords; the user should be able to select the character set and the length
  *
@@ -15,7 +14,11 @@ public class Password
        Random randNum = new Random();
        int passwordInt;
        char passwordChar;
-       
+       String answer;
+    
+    //do while loop to execute the program at least once
+    do
+    {
        System.out.println("Please choose one of the menu options listed below.");
        System.out.println("Option \t\t\t   Character Sets");
        System.out.println("  [1]  \t\t\t chars in lowercase");
@@ -96,104 +99,20 @@ public class Password
                 i--;
            }
         }
-        System.out.println();
-        System.out.println();
-       
-        System.out.print("Do you want to enter generate another password? [Y/N] \n");
-        String text = in.next();
         
-        while(text.equalsIgnoreCase("Y"))
-        {
-         System.out.print("Menu option (1-4): ");
-         input1 = in.nextInt();
-         
-         if(input1 < 5 && input1 !=0)
-         {
-          System.out.print("Number of characters: ");
-          input2 = in.nextInt();
-         
-          System.out.print("Your password: ");
-         
-          //choice number 1
-          if(input1==1)
-          {
-           for(int i = 1; i<=input2; i++)
-           {
-              passwordInt = randNum.nextInt(123);
-              if(passwordInt >= 97)
-              {
-                  passwordChar = (char)passwordInt;
-                  System.out.print(passwordChar);
-              }
-              else
-                i--;
-           }
-          }
-            
-          //choice number 2
-          else if(input1==2)
-          {
-           for(int i = 1; i<=input2; i++)
-           {
-              passwordInt = randNum.nextInt(123);
-              if((passwordInt >= 65 && passwordInt <= 90) || passwordInt >= 97)
-              {
-                  passwordChar = (char)passwordInt;
-                  System.out.print(passwordChar);
-              }
-              else
-                i--;
-           }
-          }
-            
-          //choice number 3
-          else if(input1==3)
-          {
-          for(int i = 1; i<=input2; i++)
-           {
-              passwordInt = randNum.nextInt(123);
-              if((passwordInt >= 48 && passwordInt <= 57) || (passwordInt >= 65 && passwordInt <= 90) || passwordInt >= 97)
-              {
-                  passwordChar = (char)passwordInt;
-                  System.out.print(passwordChar);
-              }
-              else
-                i--;
-           }  
-          }
-            
-          //choice number 4
-          else
-          {
-           for(int i = 1; i<=input2; i++)
-           {
-              passwordInt = randNum.nextInt(127);
-              if(passwordInt >= 33)
-              {
-                  passwordChar = (char)passwordInt;
-                  System.out.print(passwordChar);
-              }
-              else
-                i--;
-           }
-          }//end if statement for choices 1 through 4
-            
-          System.out.println();
-          System.out.println();
-          System.out.print("Do you want to enter generate another password? [Y/N] ");
-          text = in.next();
-          System.out.println();
-         }//end if statement
+       }//end of first if statement
         
-         else
-                System.out.println("\nPlease enter a valid numerical option.\n");
-        } //end of while loop
-        
-        System.out.println("The program will quit now.");
-        
-    }
-      
-    else
-        System.out.println("Please try again and choose a number between 1 and 4.");
-}
+       else
+            System.out.println("Please try again and choose a number between 1 and 4.");
+    
+       System.out.println();
+       System.out.println();
+       System.out.print("Do you want to enter generate another password? [Y/N] ");
+       answer = in.next();
+       System.out.println();
+       System.out.println();
+    }while(answer.equalsIgnoreCase("Y"));   //end do while loop
+    
+    System.out.println("The program will exit now.");
+   }
 }

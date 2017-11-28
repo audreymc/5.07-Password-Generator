@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Password here.
+ * To generate random passwords; the user should be able to select the character set and the length
  *
  * @author Audrey McMillion
  * @version 11/27/2017

@@ -2,8 +2,8 @@
 /**
  * Write a description of class Password here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Audrey McMillion
+ * @version 11/27/2017
  */
 import java.util.Scanner;
 import java.util.Random;
@@ -33,6 +33,7 @@ public class Password
         
         System.out.print("Your password: ");
        
+        //choice number 1
         if(input1==1)
         {
            for(int i = 1; i<=input2; i++)
@@ -47,6 +48,8 @@ public class Password
                 i--;
            }
         }
+          
+        //choice number 2
         else if(input1==2)
         {
            for(int i = 1; i<=input2; i++)
@@ -61,6 +64,8 @@ public class Password
                 i--;
            }
         }
+          
+        //choice number 3
         else if(input1==3)
         {
          for(int i = 1; i<=input2; i++)
@@ -75,6 +80,8 @@ public class Password
                 i--;
            }  
         }
+          
+        //choice number 4
         else
         {
            for(int i = 1; i<=input2; i++)
@@ -107,6 +114,7 @@ public class Password
          
           System.out.print("Your password: ");
          
+          //choice number 1
           if(input1==1)
           {
            for(int i = 1; i<=input2; i++)
@@ -121,6 +129,8 @@ public class Password
                 i--;
            }
           }
+            
+          //choice number 2
           else if(input1==2)
           {
            for(int i = 1; i<=input2; i++)
@@ -135,6 +145,8 @@ public class Password
                 i--;
            }
           }
+            
+          //choice number 3
           else if(input1==3)
           {
           for(int i = 1; i<=input2; i++)
@@ -149,6 +161,8 @@ public class Password
                 i--;
            }  
           }
+            
+          //choice number 4
           else
           {
            for(int i = 1; i<=input2; i++)
@@ -162,7 +176,8 @@ public class Password
               else
                 i--;
            }
-          }
+          }//end if statement for choices 1 through 4
+            
           System.out.println();
           System.out.println();
           System.out.print("Do you want to enter generate another password? [Y/N] ");
@@ -177,7 +192,8 @@ public class Password
         System.out.println("The program will quit now.");
         
     }
+      
     else
-        System.out.println("Please choose a number between 1 and 4.");
+        System.out.println("Please try again and choose a number between 1 and 4.");
 }
 }
